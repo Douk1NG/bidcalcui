@@ -11,7 +11,7 @@ function App() {
   const selectRef = useRef<HTMLSelectElement>(null)
 
   const getDataSource = async (params: string) => {
-    return await fetch(`http://127.0.0.1:8000/api/bid?${params}`, {
+    return await fetch(`${import.meta.env.VITE_MAIN_SERVICE}/api/bid?${params}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
