@@ -36,14 +36,14 @@ function App() {
 
   return (
     <main className="flex flex-col md:flex-row rounded-lg border bg-card text-card-foreground shadow-sm w-full gap-2 p-6">
-      <section className="w-1/2">
+      <section className="w-full md:w-1/2">
         <Form
           currencyInputRef={inputRef}
           selectRef={selectRef}
           handleOnChange={handleOnChange}
         />
       </section>
-      <section className="w-1/2">
+      <section className="w-full md:w-1/2">
         <Table
           dataSource={dataSource}
         />
