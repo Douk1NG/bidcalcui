@@ -13,13 +13,6 @@ const formatValue = (value: number) => {
     }).format(value)
 }
 
-const feesNames = {
-    BasicBuyerFee: 'Basic',
-    SpecialFee: 'Special',
-    AssociationFee: 'Association',
-    StorageFee: 'Storage'
-}
-
 const KEY_TOTAL = 'Total'
 
 const Index = (props: PropsType) => {
@@ -41,7 +34,7 @@ const Index = (props: PropsType) => {
                 <li key={fee} className={`flex justify-between gap-x-6 py-5 px-2 rounded-lg ${fee === KEY_TOTAL && 'bg-gray-100'}`}>
                     <div className="flex min-w-0 gap-x-4">
                         <div className="min-w-0 flex-auto">
-                            <p className="text-sm font-semibold leading-6 text-gray-900">{feesNames[fee as keyof typeof feesNames] ?? fee}</p>
+                            <p className="text-sm font-semibold leading-6 text-gray-900">{fee}</p>
                         </div>
                     </div>
                     <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
